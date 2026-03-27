@@ -297,7 +297,7 @@ jobs:
           set -euo pipefail
           export GH_CONFIG_DIR="$RUNNER_TEMP/gh-dr"
           chmod +x "$GITHUB_WORKSPACE"/scripts/*.sh || true
-          echo "Checking SSH key at: $SSH_KEY_VARIABLE_NAME"
+          echo "Checking SSH key at: $SSH_PRIVATE_KEY"
           ls -l /tmp/tmp.*.pem
 
           "$GITHUB_WORKSPACE"/scripts/1_migration.sh \
